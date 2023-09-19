@@ -19,7 +19,29 @@ class HomePageView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Jakarta"),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 60),
+                        child: Text(
+                          "Location",
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Jakarta",
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          ),
+                          Image.asset(
+                            'assets/IC_Arrow down.png',
+                            scale: 0.7,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                   Image.asset('assets/IC_Notification.png')
                 ],
               ),
