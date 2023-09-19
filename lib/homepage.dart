@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate/utilities/main_button.dart';
 
 class HomePageView extends StatelessWidget {
-  const HomePageView({super.key});
+  final List<String> names = ["House", "Apartment", "Vila", "Hotel"];
+  HomePageView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -52,14 +54,28 @@ class HomePageView extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 23,
+              ),
+              SizedBox(
+                height: 40,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    itemCount: names.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: MainButton(text: names[index]),
+                      );
+                    }),
+              ),
 
               const SizedBox(
                 height: 23,
               ),
               //category list
-              Placeholder(
-                fallbackHeight: 40,
-              ),
+
               SizedBox(
                 height: 23,
               ),
