@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate/utilities/detailed_tile.dart';
 import 'package:real_estate/utilities/main_button.dart';
+import 'package:real_estate/utilities/tile.dart';
 
 class HomePageView extends StatelessWidget {
   final List<String> names = ["House", "Apartment", "Vila", "Hotel"];
@@ -10,10 +12,10 @@ class HomePageView extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(14.0),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Row(
@@ -21,15 +23,15 @@ class HomePageView extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 60),
+                      const Padding(
+                        padding: EdgeInsets.only(right: 60),
                         child: Text(
                           "Location",
                         ),
                       ),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             "Jakarta",
                             style: TextStyle(
                                 fontSize: 22, fontWeight: FontWeight.bold),
@@ -45,8 +47,8 @@ class HomePageView extends StatelessWidget {
                   Image.asset('assets/IC_Notification.png')
                 ],
               ),
-              SizedBox(
-                height: 23,
+              const SizedBox(
+                height: 21,
               ),
               //search
 
@@ -77,7 +79,7 @@ class HomePageView extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 23,
+                height: 21,
               ),
               SizedBox(
                 height: 40,
@@ -94,23 +96,72 @@ class HomePageView extends StatelessWidget {
               ),
 
               const SizedBox(
-                height: 23,
-              ),
-              //category list
-
-              SizedBox(
-                height: 23,
+                height: 21,
               ),
               //near from you
-              Placeholder(
-                fallbackHeight: 300,
+
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Near from you",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text("See more",
+                      style: TextStyle(color: Color.fromARGB(255, 81, 81, 81))),
+                ],
               ),
-              SizedBox(
-                height: 23,
+              const SizedBox(
+                height: 21,
               ),
-              //best for you
-              Placeholder(
-                fallbackHeight: 200,
+
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    CardTile(image: "assets/house1.png"),
+                    SizedBox(
+                      width: 12,
+                    ),
+                    CardTile(image: "assets/house2.png"),
+                    SizedBox(
+                      width: 12,
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 21,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Best for you",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text(
+                    "See more",
+                    style: TextStyle(color: Color.fromARGB(255, 81, 81, 81)),
+                  ),
+                ],
+              ),
+              const Column(
+                children: [
+                  DetailedTile(
+                      image: "assets/pexels-expect-best-323780 1.png",
+                      name: "Orchad House",
+                      price: 25000000,
+                      bedroom: 6,
+                      bathroom: 4),
+                  DetailedTile(
+                      image:
+                          "assets/ksenia-balandina-RCF5KSWb7Ms-unsplash 1.png",
+                      name: "The Hollies House",
+                      price: 15000000,
+                      bedroom: 5,
+                      bathroom: 4),
+                ],
               )
             ],
           ),
