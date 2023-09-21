@@ -56,14 +56,16 @@ class HomePageView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const SizedBox(
-                    width: 290,
+                    width: 275,
                     child: TextField(
                       decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(vertical: 5.0),
                         prefixIcon: Icon(
                           Icons.search,
                           size: 30,
                         ),
                         hintText: "Search address , or near you",
+                        hintStyle: TextStyle(fontSize: 14),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(15),
@@ -74,7 +76,7 @@ class HomePageView extends StatelessWidget {
                   ),
                   Image.asset(
                     'assets/IC_Filter.png',
-                    scale: 0.8,
+                    scale: 1,
                   ),
                 ],
               ),
