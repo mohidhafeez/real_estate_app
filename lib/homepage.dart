@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate/screen.dart';
+
 import 'package:real_estate/utilities/detailed_tile.dart';
 import 'package:real_estate/utilities/main_button.dart';
 import 'package:real_estate/utilities/tile.dart';
@@ -121,11 +123,23 @@ class HomePageView extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    CardTile(image: "assets/house1.png"),
+                    CardTile(
+                      image: "assets/house1.png",
+                      screen: Screen(
+                        image: 'assets/house1.png',
+                        price: 25000000,
+                      ),
+                    ),
                     SizedBox(
                       width: 12,
                     ),
-                    CardTile(image: "assets/house2.png"),
+                    CardTile(
+                      image: "assets/house2.png",
+                      screen: Screen(
+                        image: 'assets/house2.png',
+                        price: 15000000,
+                      ),
+                    ),
                     SizedBox(
                       width: 12,
                     ),
@@ -153,14 +167,14 @@ class HomePageView extends StatelessWidget {
                   DetailedTile(
                       image: "assets/pexels-expect-best-323780 1.png",
                       name: "Orchad House",
-                      price: 25000000,
+                      price: '2.500.000.000',
                       bedroom: 6,
                       bathroom: 4),
                   DetailedTile(
                       image:
                           "assets/ksenia-balandina-RCF5KSWb7Ms-unsplash 1.png",
                       name: "The Hollies House",
-                      price: 15000000,
+                      price: "1.500.000.000",
                       bedroom: 5,
                       bathroom: 4),
                 ],

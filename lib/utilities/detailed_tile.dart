@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class DetailedTile extends StatelessWidget {
   final String image;
   final String name;
-  final int price;
+  final String price;
   final int bedroom;
   final int bathroom;
   const DetailedTile(
@@ -32,7 +32,7 @@ class DetailedTile extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               Text(
-                "Rp.$price /Year",
+                "Rp.$price /Year".toString(),
                 style: TextStyle(color: Colors.blue),
               ),
               Row(

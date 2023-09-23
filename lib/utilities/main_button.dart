@@ -19,7 +19,7 @@ class MainButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           gradient: LinearGradient(
-            colors: [const Color.fromARGB(255, 98, 184, 255), Colors.blue],
+            colors: [Color.fromARGB(255, 137, 200, 250), Colors.blue],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
